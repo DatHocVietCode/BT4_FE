@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { AuthWrapper } from "./components/context/auth.context.jsx";
 import HomePage from "./pages/home.jsx";
 import LoginPage from "./pages/login.jsx";
+import Products from "./pages/products.jsx";
 import RegisterPage from "./pages/register.jsx";
 import UserPage from "./pages/user.jsx";
 import "./styles/global.css";
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "products",
+        element: <Products />,
       },
       {
         path: "user",
