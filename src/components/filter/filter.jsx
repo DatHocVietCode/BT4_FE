@@ -30,10 +30,21 @@ const ProductFilter = ({ onFilter }) => {
         <div style={{ marginBottom: 24 }}>
             <Row gutter={16}>
                 <Col>
-                    <Input placeholder="Keyword" value={keyword} onChange={e => setKeyword(e.target.value)} />
+                    <Input
+                        placeholder="Keyword"
+                        value={keyword}
+                        onChange={e => setKeyword(e.target.value)}
+                        addonBefore="Keyword"
+                    />
                 </Col>
                 <Col>
-                    <Select placeholder="Category" style={{ width: 150 }} value={category} onChange={setCategory} allowClear>
+                    <Select
+                        placeholder="Category"
+                        style={{ width: 160 }}
+                        value={category}
+                        onChange={setCategory}
+                        allowClear
+                    >
                         <Option value="Electronics">Electronics</Option>
                         <Option value="Accessories">Accessories</Option>
                         <Option value="Wearables">Wearables</Option>
@@ -46,26 +57,57 @@ const ProductFilter = ({ onFilter }) => {
                     </Select>
                 </Col>
                 <Col>
-                    <Input placeholder="Price Min" value={priceMin} onChange={e => setPriceMin(e.target.value)} />
+                    <Input
+                        placeholder="Min"
+                        value={priceMin}
+                        onChange={e => setPriceMin(e.target.value)}
+                        addonBefore="Price Min"
+                    />
                 </Col>
                 <Col>
-                    <Input placeholder="Price Max" value={priceMax} onChange={e => setPriceMax(e.target.value)} />
+                    <Input
+                        placeholder="Max"
+                        value={priceMax}
+                        onChange={e => setPriceMax(e.target.value)}
+                        addonBefore="Price Max"
+                    />
                 </Col>
                 <Col>
-                    <Input placeholder="Discount Min" value={discountMin} onChange={e => setDiscountMin(e.target.value)} />
+                    <Input
+                        placeholder="Discount"
+                        value={discountMin}
+                        onChange={e => setDiscountMin(e.target.value)}
+                        addonBefore="Discount Min"
+                    />
                 </Col>
                 <Col>
-                    <Input placeholder="Views Min" value={viewsMin} onChange={e => setViewsMin(e.target.value)} />
+                    <Input
+                        placeholder="Views"
+                        value={viewsMin}
+                        onChange={e => setViewsMin(e.target.value)}
+                        addonBefore="Views Min"
+                    />
                 </Col>
                 <Col>
-                    <Select placeholder="Sort By" style={{ width: 120 }} value={sortBy} onChange={setSortBy} allowClear>
+                    <Select
+                        placeholder="Sort By"
+                        style={{ width: 120 }}
+                        value={sortBy}
+                        onChange={setSortBy}
+                        allowClear
+                    >
                         <Option value="price">Price</Option>
                         <Option value="views">Views</Option>
                         <Option value="discount">Discount</Option>
                     </Select>
                 </Col>
                 <Col>
-                    <Select placeholder="Order" style={{ width: 120 }} value={sortOrder} onChange={setSortOrder}>
+                    <Select
+                        placeholder="Order"
+                        style={{ width: 120 }}
+                        value={sortOrder}
+                        onChange={setSortOrder}
+                    >
                         <Option value="asc">Asc</Option>
                         <Option value="desc">Desc</Option>
                     </Select>
